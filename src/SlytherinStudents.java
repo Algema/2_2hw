@@ -1,10 +1,10 @@
-public class Slytherin extends HogwartsStudents {
+public class SlytherinStudents extends HogwartsStudents {
     private  int cunning;
     private int determination;
     private int ambition;
     private int resourcefulness;
     private int lustForPower;
-    public Slytherin ( String name, String surname, int magic, int moving,int cunning,int determination,int ambition,int resourcefulness,int lustForPower) {
+    public SlytherinStudents(String name, String surname, int magic, int moving, int cunning, int determination, int ambition, int resourcefulness, int lustForPower) {
         super( name,surname,magic,moving);
         this.cunning=cunning;
         this.determination=determination;
@@ -53,15 +53,15 @@ public class Slytherin extends HogwartsStudents {
         this.lustForPower = lustForPower;
     }
     public int sumS(){
-        return super.ability()+getCunning()+getDetermination()+getAmbition()+getResourcefulness()+getLustForPower();
+        return getCunning()+getDetermination()+getAmbition()+getResourcefulness()+getLustForPower();
     }
 
     @Override
     public String toString() {
-        return  super.toString()+", " + "cunning=" + cunning + ", determination=" + determination + ", ambition=" + ambition + ", resourcefulness=" + resourcefulness + ", lustForPower=" + lustForPower;
+        return  "cunning=" + cunning + ", determination=" + determination + ", ambition=" + ambition + ", resourcefulness=" + resourcefulness + ", lustForPower=" + lustForPower;
     }
 
-    public static void  bestSlytherin (Slytherin student1,Slytherin student2){
+    public static void  bestSlytherin (SlytherinStudents student1, SlytherinStudents student2){
         if (student1.sumS()>student2.sumS()){
             System.out.println( student1.getName()+" "+student1.getSurname()+" лучший Слизеринец, чем "+student2.getName()+" "+student2.getSurname());
         }else if(student1.sumS()<student2.sumS()){

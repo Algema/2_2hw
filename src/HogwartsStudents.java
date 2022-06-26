@@ -9,6 +9,9 @@ public class HogwartsStudents {
         this.magic=magic;
         this.moving=moving;
     }
+
+
+
     public String getName() {
         return this.name;
     }
@@ -53,6 +56,9 @@ public class HogwartsStudents {
         }else{
             System.out.println(student2.getName()+" "+student2.getSurname()+ " и " +student1.getName()+" "+student1.getSurname() + "имеют одинаковое количество баллов");
         }
+    }
+    public void printStudent(){
+        System.out.println(this.toString());
     }
 
 }

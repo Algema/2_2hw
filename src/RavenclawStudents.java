@@ -1,9 +1,9 @@
-public class Ravenclaw  extends HogwartsStudents {
+public class RavenclawStudents extends HogwartsStudents {
     private  int smart;
     private int wise;
     private int witty;
     private int creative;
-    public Ravenclaw (String name, String surname, int magic, int moving, int smart,int wise, int witty, int creative) {
+    public RavenclawStudents(String name, String surname, int magic, int moving, int smart, int wise, int witty, int creative) {
         super(name,surname,magic,moving);
         this.smart=smart;
         this.wise=wise;
@@ -43,14 +43,14 @@ public class Ravenclaw  extends HogwartsStudents {
         this.creative = creative;
     }
     public int sumR(){
-        return getMagic()+getMoving()+getSmart()+getWise()+getWitty()+getCreative();
+        return getSmart()+getWise()+getWitty()+getCreative();
     }
 
     @Override
     public String toString() {
         return super.toString()+", " + "smart=" + smart + ", wise=" + wise + ", witty=" + witty + ", creative=" + creative;
     }
-    public static void  bestRavenclaw (Ravenclaw student1,Ravenclaw student2){
+    public static void  bestRavenclaw (RavenclawStudents student1, RavenclawStudents student2){
         if (student1.sumR()>student2.sumR()){
             System.out.println( student1.getName()+" "+student1.getSurname()+" лучший Когтевранец, чем "+student2.getName()+" "+student2.getSurname());
         }else if(student1.sumR()<student2.sumR()){
